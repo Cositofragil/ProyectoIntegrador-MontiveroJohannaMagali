@@ -1,0 +1,32 @@
+.row{
+    padding: 8px;
+}
+div{
+    background-color: white;
+    text-align: center;
+}
+/*etiqueta nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 15%;
+}
+/* medidas responsivas para la fotoperfil*/
+@media(min-width:576px){
+    #fotoperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 2%;
+        top: 390px;
+    }
+}
+@media(max-width:575px){
+    #fotoperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px gray;
+        left: 43%;
+    }
+}
