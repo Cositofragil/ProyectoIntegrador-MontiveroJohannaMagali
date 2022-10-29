@@ -8,25 +8,30 @@ div{
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
-    margin-top: 15%;
+    margin-top: 65%;
 }
 /* medidas responsivas para la fotoperfil*/
 @media(min-width:576px){
     #fotoperfil{
-        position: absolute;
-        width: 13%;
-        border-radius: 100%;
+        border-radius: 50%;
         box-shadow: 3px 3px 3px gray;
-        left: 2%;
-        top: 400px;
     }
-}
+
+    .descripcion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    }
+
 @media(max-width:575px){
     #fotoperfil{
         position: absolute;
-        width: 15%;
-        border-radius: 100%;
+        width: 30%;
+        border-radius: 50%;
         box-shadow: 3px 3px 3px gray;
-        left: 43%;
+        left: 33%;
+        top: 950px;
     }
 }

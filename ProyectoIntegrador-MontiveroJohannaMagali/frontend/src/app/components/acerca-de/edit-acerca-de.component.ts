@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./edit-acerca-de.component.css']
 })
 export class EditAcercaDeComponent implements OnInit {
-  persona: persona = null;
+  persona: persona = new persona("","","","");
 
   constructor(private activatedRouter: ActivatedRoute,
      private personaService: PersonaService,
@@ -31,6 +31,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
+    this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
@@ -43,7 +44,7 @@ export class EditAcercaDeComponent implements OnInit {
 
   uploadImage($event:any){
     const id = this.activatedRouter.snapshot.params['id'];
-    const name = "perfil" + id;
+    const name = "perfil_" + id;
     this.imageService.uploadImage($event, name)
   }
 }

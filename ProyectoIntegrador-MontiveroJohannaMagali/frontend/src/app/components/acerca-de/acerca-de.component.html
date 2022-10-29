@@ -1,16 +1,19 @@
  <div class="row">
+        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
+            Editar 
+        </button>
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src="../../../assets/fotoperfil.jpg" id="fotoperfil" class="img-fluid">
+            <img src={{persona.img}} id="fotoperfil" class="img-fluid">
         </div>
         <div class="xol-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="nombre">Montivero Johanna Magali</p>
+            <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
             <p>Full Stack Developer Jr.</p>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 descripcion">
             <span>
                 <h1>Acerca de mí</h1>
                 <hr>
-            <p>Estudiante de Kinesiología y fisiatría y amante de la programación.<br> 24 años y dos hobbies: hacer ejercicio y comer carbohidratos.<br>Tengo un perro que se llama Draco.</p>
+            <p>{{persona.descripcion}}</p>
             </span>
         </div>
      <hr>
